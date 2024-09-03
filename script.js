@@ -39,22 +39,14 @@ function swiperAnimation() {
 swiperAnimation();
 
 var menu = document.querySelector("nav h3");
+
 var full = document.querySelector("#full-scr");
-var navimg = document.querySelector("nav img");
-var flag = 0;
-console.log(navimg);
+var closeBtn = document.querySelector(".close-btn");
+
 menu.addEventListener("click", () => {
-  if (flag == 0) {
-    full.style.top = 0;
-    navimg.style.opactiy = 0;
-    menu.textContent = "Close";
-    flag = 1;
-    console.log(0);
-  } else {
-    full.style.top = "-100%";
-    navimg.style.opactiy = 1;
-    menu.textContent = "Menu";
-    flag = 0;
-    console.log(1);
-  }
+  full.style.top = 0;
+});
+
+closeBtn.addEventListener("click", () => {
+  full.style.top = "-100%";
 });
